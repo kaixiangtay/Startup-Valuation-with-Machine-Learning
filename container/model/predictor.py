@@ -1,6 +1,3 @@
-# This is the file that implements a flask server to do inferences. It's the file that you will modify to
-# implement the scoring for your own algorithm.
-
 from __future__ import print_function
 
 import io
@@ -21,8 +18,8 @@ model_path = os.path.join(prefix, "model")
 # It has a predict function that does a prediction based on the model and the input data.
 
 
-class ScoringService(object):
-    model = None  # Where we keep the model when it's loaded
+class ValuationService(object):
+    model = None  
 
     @classmethod
     def get_model(cls):
@@ -51,7 +48,7 @@ app = flask.Flask(__name__)
 def ping():
     """Determine if the container is working and healthy. In this sample container, we declare
     it healthy if we can load the model successfully."""
-    health = ScoringService.get_model() is not None  # You can insert a health check here
+    health = ValuationService.get_model() is not None  
 
     status = 200 if health else 404
     return flask.Response(response="\n", status=status, mimetype="application/json")
@@ -59,9 +56,8 @@ def ping():
 
 @app.route("/invocations", methods=["POST"])
 def transformation():
-    """Do an inference on a single batch of data. In this sample server, we take data as CSV, convert
-    it to a pandas data frame for internal use and then convert the predictions back to CSV (which really
-    just means one prediction per line, since there's a single column.
+    """Do an inference on a single batch of data. We take data as CSV, convert
+    it to a pandas data frame for internal use and then convert the predictions back to CSV. 
     """
     data = None
 
@@ -78,7 +74,7 @@ def transformation():
     print("Invoked with {} records".format(data.shape[0]))
 
     # Do the prediction
-    predictions = ScoringService.predict(data)
+    predictions = ValuationService.predict(data)
 
     # Convert from numpy back to CSV
     out = io.StringIO()
