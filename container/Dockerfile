@@ -35,6 +35,8 @@ ENV PYTHONDONTWRITEBYTECODE=TRUE
 ENV PATH="/opt/program:${PATH}"
 
 # Set up the program in the image
-COPY model /opt/program
+COPY decision_trees /opt/program
+RUN chmod +x /opt/program/train
+RUN chmod +x /opt/program/serve
 WORKDIR /opt/program
 
