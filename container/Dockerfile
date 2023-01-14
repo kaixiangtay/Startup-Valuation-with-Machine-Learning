@@ -23,7 +23,7 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 # linking them together. Likewise, pip leaves the install caches populated which uses
 # a significant amount of space. These optimizations save a fair amount of space in the
 # image, which reduces start up time.
-RUN pip --no-cache-dir install numpy==1.16.2 scipy==1.2.1 scikit-learn==0.20.2 pandas flask gunicorn
+RUN pip --no-cache-dir install numpy==1.19.5 scipy==1.5.4 scikit-learn==0.20.2 pandas flask gunicorn
 
 # Set some environment variables. PYTHONUNBUFFERED keeps Python from buffering our standard
 # output stream, which means that logs can be delivered to the user quickly. PYTHONDONTWRITEBYTECODE
