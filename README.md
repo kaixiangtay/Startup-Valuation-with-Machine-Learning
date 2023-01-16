@@ -76,7 +76,7 @@ During our team development on AWS Cloud environment, we also utilized the AWS C
 
 To try out our endpoint, you can import the Postman collection located at: [https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json](https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json).
 
-The above collection includes a sample payload and makes a POST request to our endpoint!
+The above collection includes a sample request body and makes a POST request to our endpoint!
 
 The endpoint is located at: [https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
 
