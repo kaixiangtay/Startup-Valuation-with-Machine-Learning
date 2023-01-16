@@ -72,6 +72,14 @@ During our team development on AWS Cloud environment, we also utilized the AWS C
  
  <img src="./pictures/Autoscaling.png" alt="autoscaling" width="640" height="320" border="10" />
 
+## Usage
+
+To try out our endpoint, you can import the Postman collection located at [https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json](https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json).
+
+The above collection includes a sample payload and makes a POST request to our endpoint!
+
+The endpoint is located at: [https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
+
 ## References
 
 Garkavenko, M., Mirisaee, H., Gaussier, É., Guerraz, A., & Lagnier, C. (2021). Valuation of Startups: A Machine Learning Perspective. ECIR.
