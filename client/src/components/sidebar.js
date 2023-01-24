@@ -2,8 +2,17 @@ import React from "react";
 
 function Sidebar() {
 
+    const onClick = () => {
+        const sideMenu = document.querySelector("aside");
+        const closeBtn = document.querySelector("#close-btn");
+        sideMenu.style.display = "block";
+        closeBtn.addEventListener('click', () => {
+            sideMenu.style.display = 'none';
+        })
+    }
+
     return (
-        <aside>
+        <aside onClick = {() => onClick()}>
             <div className="top">
                 <div className="logo">
                     <img src="../images/logo.svg" alt="logo" />
