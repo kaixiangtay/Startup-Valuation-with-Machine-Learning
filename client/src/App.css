@@ -435,7 +435,7 @@ main .form div {
 }
 
 .input-field label {
-  width: 12.5rem;
+  width: 24rem;
   margin-right: 0.625rem;
   font-size: 1rem;
   font-weight: 400;
@@ -458,7 +458,7 @@ main .form div {
 }
 
 .submit-btn {
-  width: 100%;
+  width: 12rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.87rem;
   border: 0;
@@ -466,6 +466,8 @@ main .form div {
   color: var(--color-white);
   border-radius: var(--border-radius-1);
   outline: none;
+  display: flex;
+  align-items: flex-end;
 }
 
 .input-field:last-child {
