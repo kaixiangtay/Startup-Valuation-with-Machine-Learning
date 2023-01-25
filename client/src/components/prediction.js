@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./form";
 
-function Sidebar(props) {
+function Prediction(props) {
 
     return (
         <main>
@@ -28,4 +28,4 @@ function Sidebar(props) {
 
 //continue from 28:52
 
-export default Sidebar;
+export default Prediction;
