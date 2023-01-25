@@ -89,7 +89,7 @@ class Form extends Component {
             + ","
             + (this.state.convertible ? this.state.convertible : "0")
             + ","
-            + (this.state.crowd ? this.state.crowd : "0")
+            + (this.state.crowdfunding ? this.state.crowdfunding : "0")
             + ","
             + (this.state.crowd_equity ? this.state.crowd_equity : "0")
             + ","
@@ -338,7 +338,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Funding received through VCs</label>
+                        <label>Venture round funding</label>
                         <input
                             className="input"
                             type="number"
@@ -448,17 +448,6 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Crowd</label>
-                        <input
-                            className="input"
-                            type="number"
-                            name="crowd"
-                            value={this.state.crowd}
-                            onChange={this.onChange}
-                            min={0}
-                        ></input>
-                    </div>
-                    <div className="input-field">
                         <label>Crowd equity</label>
                         <input
                             className="input"
@@ -481,7 +470,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Grant</label>
+                        <label>Funding received through grants</label>
                         <input
                             className="input"
                             type="number"
@@ -580,7 +569,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Founding year </label>
+                        <label className="required">Founding year</label>
                         <input
                             className="input"
                             type="number"

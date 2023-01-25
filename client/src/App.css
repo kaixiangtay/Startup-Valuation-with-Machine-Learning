@@ -336,45 +336,16 @@ main .form div {
     grid-template-columns: 1fr;
   }
 
-  aside {
-    position: fixed;
-    left: -100%;
-    background: var(--color-white);
-    width: 18rem;
-    z-index: 3;
-    box-shadow: 1rem 3rem 4rem var(--color-light);
-    height: 100vh;
-    padding-right: var(--card-padding);
-    display: none;
-    animation: showMenu 400ms ease forwards;
-  }
-
-  @keyframes showMenu {
-    to{
-      left: 0;
-    }
-  }
-
-  aside .logo {
-    margin-left: 1rem;
-  }
-
   aside .logo h2 {
-    display: inline;
+    display: none;
   }
 
-  aside .sidebar h3{
-    display: inline;
+  aside .sidebar h3 {
+    display: none;
   }
 
   aside .sidebar a {
-    width: 100%;
-    heigth: 3.4rem;
-  }
-
-  aside .close {
-    display: inline-block;
-    cursor: pointer;
+    width: 5.6rem;
   }
 
   main{

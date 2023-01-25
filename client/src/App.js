@@ -3,7 +3,7 @@ import { useState } from 'react';
 import SidebarWrapper from './components/sidebar';
 import Prediction from './components/prediction';
 import About from './components/about';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import ApiPage from './components/apiPage';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       <div className='container'>
         <SidebarWrapper />
         <Routes>
-          <Route path='prediction' element={<Prediction valuation={valuation} setValuation={setValuation}/>} />
+          <Route path='/' element={<Prediction valuation={valuation} setValuation={setValuation}/>} />
           <Route path='api' element={<ApiPage />} />
           <Route path='about' element={<About />} />
         </Routes>

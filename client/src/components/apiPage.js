@@ -22,7 +22,7 @@ function ApiPage() {
           <p>
             The API is located at:
             <a
-              href='https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction'
+              href='https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction'
               target='_blank'
               rel='noopener noreferrer'>
               {' '}

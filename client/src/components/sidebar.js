@@ -6,12 +6,14 @@ function SidebarWrapper() {
 
   const onClick = () => {
     const sideMenu = document.querySelector('aside');
-    const closeBtn = document.querySelector('#close-btn');
     sideMenu.style.display = 'block';
-    closeBtn.addEventListener('click', () => {
-      sideMenu.style.display = 'none';
-    });
+
   };
+
+  const onCloseButtonClick = () => {
+    const sideMenu = document.querySelector('aside');
+    sideMenu.style.display = 'none';
+  }
 
   const onPageClick = (pageName) => {
     setActivePage(pageName);
@@ -26,12 +28,12 @@ function SidebarWrapper() {
               FIN<span className='danger'>KERS</span>
             </h2>
           </div>
-          <div className='close' id='close-btn'>
+          <div className='close' id='close-btn' onClick={() => onCloseButtonClick()}>
             <span className='material-icons-sharp'>close</span>
           </div>
         </div>
         <div className='sidebar'>
-          <Link to='/prediction' className={activePage == 'prediction' ? 'active': ''} onClick={() => onPageClick('prediction')}>
+          <Link to='/' className={activePage == 'prediction' ? 'active': ''} onClick={() => onPageClick('prediction')}>
             <span className='material-icons-sharp'>query_stats</span>
             <h3>Prediction</h3>
           </Link>
