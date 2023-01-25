@@ -78,7 +78,7 @@ To try out our endpoint, you can import the Postman collection located at: [http
 
 The above collection includes a sample request body and makes a POST request to our endpoint!
 
-The API is located at: [https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
+The API is located at: [https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
 
 ## References
 
