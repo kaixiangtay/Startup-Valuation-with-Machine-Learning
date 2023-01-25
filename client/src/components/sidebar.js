@@ -22,7 +22,6 @@ function SidebarWrapper() {
       <aside onClick={() => onClick()}>
         <div className='top'>
           <div className='logo'>
-            <img src='../images/logo.svg' alt='logo' />
             <h2>
               FIN<span className='danger'>KERS</span>
             </h2>

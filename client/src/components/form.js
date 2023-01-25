@@ -174,6 +174,11 @@ class Form extends Component {
                 });
                 console.log(res);
                 this.props.setValuation(Math.round(Number(res.data.body.split("$")[1])).toLocaleString("en-US"));
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             })
             .catch((err) => {
                 this.setState({
@@ -276,7 +281,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Mean funding</label>
+                        <label className="required">Mean funding received</label>
                         <input
                             className="input"
                             type="number"
@@ -288,7 +293,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Max funding</label>
+                        <label className="required">Max funding received</label>
                         <input
                             className="input"
                             type="number"
@@ -531,7 +536,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Seed funding</label>
+                        <label>Seed funding received</label>
                         <input
                             className="input"
                             type="number"
@@ -542,7 +547,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Funding from unattributed sources</label>
+                        <label>Funding received from unattributed sources</label>
                         <input
                             className="input"
                             type="number"
@@ -575,7 +580,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Year</label>
+                        <label className="required">Founding year </label>
                         <input
                             className="input"
                             type="number"
@@ -588,7 +593,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Month</label>
+                        <label className="required">Founding month</label>
                         <input
                             className="input"
                             type="number"
@@ -601,7 +606,7 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label className="required">Day</label>
+                        <label className="required">Founding day</label>
                         <input
                             className="input"
                             type="number"

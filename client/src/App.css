@@ -305,7 +305,7 @@ main .form div {
 
 .right .theme-toggler span.active {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-white);
   border-radius: var(--border-radius-1);
 }
 
@@ -431,7 +431,6 @@ main .form div {
 .input-field {
   margin-bottom: 1rem;
   display: flex;
-  align-items: flex-start;
 }
 
 .input-field label {
@@ -463,7 +462,7 @@ main .form div {
 .form-btn {
   margin-bottom: 1rem;
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .submit-btn {
