@@ -9,7 +9,7 @@
   --color-info-light: #dce1eb;
   --color-dark: #363949;
   --color-light: rgba(132, 139, 200, 0.18);
-  --color-primary-variant: #111e88;
+  --color-primary-variant: #5969b5;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
 
@@ -460,7 +460,7 @@ main .form div {
 .submit-btn {
   width: 12rem;
   padding: 0.5rem 0.625rem;
-  font-size: 0.87rem;
+  font-size: 1rem;
   border: 0;
   background: var(--color-primary);
   color: var(--color-white);

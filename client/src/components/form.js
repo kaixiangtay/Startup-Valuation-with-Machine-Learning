@@ -57,77 +57,77 @@ class Form extends Component {
     onSubmit(event) {
         event.preventDefault();
         const startup_string = ""
-            + this.state.Unnamed
+            + (this.state.Unnamed ? this.state.Unnamed : "0")
             + ","
-            + this.state.funding_rounds
+            + (this.state.funding_rounds ? this.state.funding_rounds : "0")
             + ","
-            + this.state.funding_total_usd
+            + (this.state.funding_total_usd ? this.state.funding_total_usd : "0")
             + ","
-            + this.state.number_of_members
+            + (this.state.number_of_members ? this.state.number_of_members : "0")
             + ","
-            + this.state.number_of_founders
+            + (this.state.number_of_founders ? this.state.number_of_founders : "0")
             + ","
-            + this.state.mean_funding
+            + (this.state.mean_funding ? this.state.mean_funding : "0")
             + ","
-            + this.state.max_funding
+            + (this.state.max_funding ? this.state.max_funding : "0")
             + ","
-            + this.state.crowdfunding
+            + (this.state.crowdfunding ? this.state.crowdfunding : "0")
             + ","
-            + this.state.post_ipo
+            + (this.state.post_ipo ? this.state.post_ipo : "0")
             + ","
-            + this.state.private_equity
+            + (this.state.private_equity ? this.state.private_equity : "0")
             + ","
-            + this.state.venture
+            + (this.state.venture ? this.state.venture : "0")
             + ","
-            + this.state.a
+            + (this.state.a ? this.state.a : "0")
             + ","
-            + this.state.angel
+            + (this.state.angel ? this.state.angel : "0")
             + ","
-            + this.state.b
+            + (this.state.b ? this.state.b : "0")
             + ","
-            + this.state.c
+            + (this.state.c ? this.state.c : "0")
             + ","
-            + this.state.convertible
+            + (this.state.convertible ? this.state.convertible : "0")
             + ","
-            + this.state.crowd
+            + (this.state.crowd ? this.state.crowd : "0")
             + ","
-            + this.state.crowd_equity
+            + (this.state.crowd_equity ? this.state.crowd_equity : "0")
             + ","
-            + this.state.d
+            + (this.state.d ? this.state.d : "0")
             + ","
-            + this.state.debt_round
+            + (this.state.debt_round ? this.state.debt_round : "0")
             + ","
-            + this.state.e
+            + (this.state.e ? this.state.e : "0")
             + ","
-            + this.state.f
+            + (this.state.f ? this.state.f : "0")
             + ","
-            + this.state.g
+            + (this.state.g ? this.state.g : "0")
             + ","
-            + this.state.grant
+            + (this.state.grant ? this.state.grant : "0")
             + ","
-            + this.state.partial
+            + (this.state.partial ? this.state.partial : "0")
             + ","
-            + this.state.post_ipo_debt
+            + (this.state.post_ipo_debt ? this.state.post_ipo_debt : "0")
             + ","
-            + this.state.post_ipo_equity
+            + (this.state.post_ipo_equity ? this.state.post_ipo_equity : "0")
             + ","
-            + this.state.private_equity_two
+            + (this.state.private_equity_two ? this.state.private_equity_two : "0")
             + ","
-            + this.state.secondary_market
+            + (this.state.secondary_market ? this.state.secondary_market : "0")
             + ","
-            + this.state.seed
+            + (this.state.seed ? this.state.seed : "0")
             + ","
-            + this.state.unattributed
+            + (this.state.unattributed ? this.state.unattributed : "0")
             + ","
-            + this.state.number_of_invested_VCs
+            + (this.state.number_of_invested_VCs ? this.state.number_of_invested_VCs : "0")
             + ","
-            + this.state.total_investment_from_VCs
+            + (this.state.total_investment_from_VCs ? this.state.total_investment_from_VCs : "0")
             + ","
-            + this.state.year
+            + (this.state.year ? this.state.year : "0")
             + ","
-            + this.state.month
+            + (this.state.month ? this.state.month : "0")
             + ","
-            + this.state.day;
+            + (this.state.day ? this.state.day : "0");
         console.log(startup_string);
         axios
             .post("https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction", {
@@ -173,7 +173,7 @@ class Form extends Component {
                     "day": "",
                 });
                 console.log(res);
-                this.props.setValuation(res.body.split("$")[1]);
+                this.props.setValuation(Math.round(Number(res.data.body.split("$")[1])).toLocaleString("en-US"));
             })
             .catch((err) => {
                 this.setState({
@@ -225,7 +225,7 @@ class Form extends Component {
                 <h2>Get Your Prediction!</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="input-field">
-                        <label>Number of funding rounds</label>
+                        <label className="required">Number of funding rounds</label>
                         <input
                             className="input"
                             type="number"
@@ -234,10 +234,11 @@ class Form extends Component {
                             onChange={this.onChange}
                             min={0}
                             step={1}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Total funding received</label>
+                        <label className="required">Total funding received</label>
                         <input
                             className="input"
                             type="number"
@@ -245,10 +246,11 @@ class Form extends Component {
                             value={this.state.funding_total_usd}
                             onChange={this.onChange}
                             min={0}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Number of members</label>
+                        <label className="required">Number of members</label>
                         <input
                             className="input"
                             type="number"
@@ -257,10 +259,11 @@ class Form extends Component {
                             onChange={this.onChange}
                             min={0}
                             step={1}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Number of founders</label>
+                        <label className="required">Number of founders</label>
                         <input
                             className="input"
                             type="number"
@@ -269,10 +272,11 @@ class Form extends Component {
                             onChange={this.onChange}
                             min={0}
                             step={1}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Mean funding</label>
+                        <label className="required">Mean funding</label>
                         <input
                             className="input"
                             type="number"
@@ -280,10 +284,11 @@ class Form extends Component {
                             value={this.state.mean_funding}
                             onChange={this.onChange}
                             min={0}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Max funding</label>
+                        <label className="required">Max funding</label>
                         <input
                             className="input"
                             type="number"
@@ -291,6 +296,7 @@ class Form extends Component {
                             value={this.state.max_funding}
                             onChange={this.onChange}
                             min={0}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
@@ -569,36 +575,42 @@ class Form extends Component {
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Year</label>
+                        <label className="required">Year</label>
                         <input
                             className="input"
                             type="number"
                             name="year"
                             value={this.state.year}
                             onChange={this.onChange}
-                            min={0}
+                            min={1500}
+                            max={2023}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Month</label>
+                        <label className="required">Month</label>
                         <input
                             className="input"
                             type="number"
                             name="month"
                             value={this.state.month}
                             onChange={this.onChange}
-                            min={0}
+                            min={1}
+                            max={12}
+                            required
                         ></input>
                     </div>
                     <div className="input-field">
-                        <label>Day</label>
+                        <label className="required">Day</label>
                         <input
                             className="input"
                             type="number"
                             name="day"
                             value={this.state.day}
                             onChange={this.onChange}
-                            min={0}
+                            min={1}
+                            max={31}
+                            required
                         ></input>
                     </div>
                     <div>
