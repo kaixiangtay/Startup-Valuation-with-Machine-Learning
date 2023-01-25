@@ -22,7 +22,7 @@ function App() {
       <div className='container'>
         <SidebarWrapper />
         <Routes>
-          <Route path='prediction' element={<Prediction />} />
+          <Route path='prediction' element={<Prediction valuation={valuation} setValuation={setValuation}/>} />
           <Route path='api' element={<ApiPage />} />
           <Route path='about' element={<About />} />
         </Routes>

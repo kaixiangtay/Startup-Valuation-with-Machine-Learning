@@ -613,7 +613,7 @@ class Form extends Component {
                             required
                         ></input>
                     </div>
-                    <div>
+                    <div className="form-btn">
                         <input type="submit" value="Submit" className="submit-btn"/>
                     </div>
                 </form>

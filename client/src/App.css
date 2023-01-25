@@ -435,10 +435,11 @@ main .form div {
 }
 
 .input-field label {
-  width: 24rem;
+  width: 36rem;
   margin-right: 0.625rem;
   font-size: 1rem;
   font-weight: 400;
+  color: var(--color-dark-variant);
 }
 
 .required::after{
@@ -448,13 +449,21 @@ main .form div {
 }
 
 .input-field input {
-  width: 100%;
+  width: 50%;
   outline: none;
   border: 0.06rem solid var(--color-primary);
   font-size: 0.87rem;
   padding: 0.5rem 0.625rem;
   border-radius: var(--border-radius-1);
   transition: all 0.3s ease;
+  color: var(--color-dark-variant);
+  background-color: var(--color-white);
+}
+
+.form-btn {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .submit-btn {
@@ -466,8 +475,6 @@ main .form div {
   color: var(--color-white);
   border-radius: var(--border-radius-1);
   outline: none;
-  display: flex;
-  align-items: flex-end;
 }
 
 .input-field:last-child {
