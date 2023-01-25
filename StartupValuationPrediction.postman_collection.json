@@ -20,10 +20,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
+					"raw": "https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
 					"protocol": "https",
 					"host": [
-						"67o14eof6e",
+						"qw16rmz5wa",
 						"execute-api",
 						"ap-southeast-1",
 						"amazonaws",
@@ -51,10 +51,10 @@
 							}
 						},
 						"url": {
-							"raw": "https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
+							"raw": "https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
 							"protocol": "https",
 							"host": [
-								"67o14eof6e",
+								"qw16rmz5wa",
 								"execute-api",
 								"ap-southeast-1",
 								"amazonaws",
@@ -72,7 +72,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Mon, 16 Jan 2023 09:33:06 GMT"
+							"value": "Wed, 25 Jan 2023 07:21:50 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -80,7 +80,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "56"
+							"value": "234"
 						},
 						{
 							"key": "Connection",
@@ -88,19 +88,19 @@
 						},
 						{
 							"key": "x-amzn-RequestId",
-							"value": "98496ff5-7c28-4ff0-8dc2-089d18aa5dd9"
+							"value": "ae1e1886-6233-4bd1-a36d-802639fafc6b"
 						},
 						{
 							"key": "x-amz-apigw-id",
-							"value": "e1D43GIASQ0FXAw="
+							"value": "fSbGXGHZyQ0FtYg="
 						},
 						{
 							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-63c519d2-6397966b78e44ab9704dcd94;Sampled=0"
+							"value": "Root=1-63d0d88e-6a17e1777a4158ca360d933d;Sampled=0"
 						}
 					],
 					"cookie": [],
-					"body": "\"Startup Predicted Valuation Amount: $777959.3031979274\""
+					"body": "{\n    \"statusCode\": 200,\n    \"headers\": {\n        \"Access-Control-Allow-Headers\": \"Content-Type\",\n        \"Access-Control-Allow-Origin\": \"*\",\n        \"Access-Control-Allow-Methods\": \"OPTIONS,POST,GET\"\n    },\n    \"body\": \"Startup Predicted Valuation Amount: $777959.3031979274\"\n}"
 				}
 			]
 		}

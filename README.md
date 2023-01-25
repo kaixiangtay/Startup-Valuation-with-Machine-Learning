@@ -46,7 +46,7 @@ Using Pandas, the tables from the datasets were merged to give the input for mod
 | General | created_at, funding_rounds, funding_total_usd, number_of_members, number_of_founders |
 | Funding | funding rounds, amount raised (each round), currency = usd, number of vc invested, total funds from vc |
 | Financial history | number of funding rounds, total amount, mean amount, max amount |
-| Result | pre_money_valuation, post_money_valuation |
+| Result | post_money_valuation |
 
 ### Modeling
 
@@ -78,7 +78,7 @@ To try out our endpoint, you can import the Postman collection located at: [http
 
 The above collection includes a sample request body and makes a POST request to our endpoint!
 
-The API is located at: [https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://67o14eof6e.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
+The API is located at: [https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction](https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction)
 
 ## References
 
