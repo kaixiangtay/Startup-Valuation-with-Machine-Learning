@@ -25,5 +25,13 @@ def lambda_handler(event, context):
     startup_valuation_prediction_label = f"Startup Predicted Valuation Amount: ${startup_valuation_prediction}"
 
     print("Startup Predicted Valuation Amount: ", startup_valuation_prediction)
-
-    return startup_valuation_prediction_label
+    
+    return {
+        'statusCode': 200,
+        'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+        },
+        'body': startup_valuation_prediction_label
+    }
