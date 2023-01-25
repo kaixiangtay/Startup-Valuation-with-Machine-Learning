@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "28895f59-057e-41a9-9eb1-c0bc4f1d2a31",
+		"name": "StartupValuationPrediction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Predict Startup Valuation Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"startup\": \"25264,42217,5,707900.0,5.0,0.0,141580.0,300000.0,0.0,0.0,0.0,0.0,0.0,141580.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2011,4,21\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
+					"protocol": "https",
+					"host": [
+						"qw16rmz5wa",
+						"execute-api",
+						"ap-southeast-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"startupvaluationprediction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Predict Startup Valuation Amount",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"startup\": \"25264,42217,5,707900.0,5.0,0.0,141580.0,300000.0,0.0,0.0,0.0,0.0,0.0,141580.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2011,4,21\"\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qw16rmz5wa.execute-api.ap-southeast-1.amazonaws.com/api/startupvaluationprediction",
+							"protocol": "https",
+							"host": [
+								"qw16rmz5wa",
+								"execute-api",
+								"ap-southeast-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"startupvaluationprediction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 25 Jan 2023 07:21:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "ae1e1886-6233-4bd1-a36d-802639fafc6b"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "fSbGXGHZyQ0FtYg="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-63d0d88e-6a17e1777a4158ca360d933d;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"headers\": {\n        \"Access-Control-Allow-Headers\": \"Content-Type\",\n        \"Access-Control-Allow-Origin\": \"*\",\n        \"Access-Control-Allow-Methods\": \"OPTIONS,POST,GET\"\n    },\n    \"body\": \"Startup Predicted Valuation Amount: $777959.3031979274\"\n}"
+				}
+			]
+		}
+	]
+}
