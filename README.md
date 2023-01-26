@@ -5,15 +5,27 @@ Startup valuation is a crucial and often complex process, as it involves predict
 ## File structure explanation
 
 ```
+├───client
+│   ├───public
+│   └───src
+│       ├───components
+│       └───images
 ├───data
 ├───model
+├───pictures
 └───scripts
 ```
+/client
+ - frontend source code
+ 
 /data
  - data csv files for modeling 
 
 /model
  - code for training model
+ 
+/pictures
+ - pictures used in this readme
 
 /scripts
  - data cleaning script: clean data from crunchbase dataset
