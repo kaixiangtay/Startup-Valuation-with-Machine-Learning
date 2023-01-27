@@ -86,6 +86,7 @@ During our team development on AWS Cloud environment, we also utilized the AWS C
 
 ## Usage
 
+![image](https://user-images.githubusercontent.com/60027105/215099646-22e7e074-fab5-4fcd-b253-361354def25d.png)
 The frontend is located at: [https://finkers.onrender.com/](https://finkers.onrender.com/)
 
 To try out our endpoint, you can import the Postman collection located at: [https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json](https://github.com/kaixiangtay/Startup-Valuation-with-Machine-Learning/blob/main/StartupValuationPrediction.postman_collection.json).
